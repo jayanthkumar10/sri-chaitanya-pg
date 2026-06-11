@@ -1453,18 +1453,23 @@ input:checked + .toggle-slider:before {
     
     /* Mobile Watermark Scaling & Layout Adjustments */
     .watermark {
-        font-size: clamp(2.5rem, 8vw, 4rem);
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+        z-index: 10; /* Ensure watermark overlays the image bottom corner */
+    }
+    
+    .mess-img-box {
+        height: 280px; /* Clean mobile landscape ratio to match standard landscape tiffin photo */
     }
     
     .mess-section .watermark-top-left {
-        top: 45%; /* Place below the 400px stacked food image */
-        left: 8%;
+        top: 255px; /* Position exactly in the highlighted gap overlaying the image bottom edge */
+        left: 6%;
         transform: rotate(-3deg);
     }
     
     .mess-section .watermark-bottom-right {
-        bottom: 2%;
-        right: 8%;
+        bottom: 1.5%;
+        right: 6%;
         transform: rotate(-3deg);
     }
 }
