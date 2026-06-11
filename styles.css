@@ -1450,6 +1450,23 @@ input:checked + .toggle-slider:before {
         gap: 1rem;
         text-align: center;
     }
+    
+    /* Mobile Watermark Scaling & Layout Adjustments */
+    .watermark {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+    
+    .mess-section .watermark-top-left {
+        top: 45%; /* Place below the 400px stacked food image */
+        left: 8%;
+        transform: rotate(-3deg);
+    }
+    
+    .mess-section .watermark-bottom-right {
+        bottom: 2%;
+        right: 8%;
+        transform: rotate(-3deg);
+    }
 }
 
 @media (max-width: 480px) {
