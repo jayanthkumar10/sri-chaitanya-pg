@@ -534,6 +534,7 @@ a {
     pointer-events: none;
     user-select: none;
     z-index: 1;
+    white-space: nowrap;
 }
 
 /* Watermark adjustments to make them fit nicely on backgrounds */
@@ -1453,8 +1454,16 @@ input:checked + .toggle-slider:before {
     
     /* Mobile Watermark Scaling & Layout Adjustments */
     .watermark {
-        font-size: clamp(2.2rem, 8vw, 3.2rem);
+        font-size: clamp(2rem, 7vw, 2.8rem);
         z-index: 10; /* Ensure watermark overlays the image bottom corner */
+    }
+    
+    .mess-section .watermark {
+        color: rgba(252, 251, 244, 0.12) !important; /* Elegant visibility on dark green background */
+    }
+    
+    .section-light .watermark {
+        color: rgba(30, 58, 43, 0.08) !important; /* Elegant visibility on light background */
     }
     
     .mess-img-box {
@@ -1462,13 +1471,13 @@ input:checked + .toggle-slider:before {
     }
     
     .mess-section .watermark-top-left {
-        top: 255px; /* Position exactly in the highlighted gap overlaying the image bottom edge */
+        top: 330px; /* Position exactly overlaying the image bottom-left corner and the gap */
         left: 6%;
         transform: rotate(-3deg);
     }
     
     .mess-section .watermark-bottom-right {
-        bottom: 1.5%;
+        bottom: 35px; /* Robust absolute pixel placement in the bottom padding */
         right: 6%;
         transform: rotate(-3deg);
     }
