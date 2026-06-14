@@ -345,6 +345,7 @@
                 <button class="gallery-tab active" data-filter="all">All Photos</button>
                 <button class="gallery-tab" data-filter="rooms">Premium Rooms</button>
                 <button class="gallery-tab" data-filter="dining">Andhra Mess</button>
+                <button class="gallery-tab" data-filter="visiting-card">Visiting Card</button>
             </div>
 
             <!-- Gallery Grid -->
@@ -371,7 +372,7 @@
                     </div>
                 </div>
 
-                <!-- Photo 3: Facilities (tiffin.jpg) -->
+                <!-- Photo 3: Dining (tiffin.jpg) -->
                 <div class="gallery-item" data-category="dining">
                     <div class="gallery-img-box">
                         <img src="tiffin.jpg" alt="Delicious South Indian Breakfast Tiffin" loading="lazy">
@@ -381,7 +382,87 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Photo 4: Room 1 (room1.jpg) -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-img-box">
+                        <img src="room1.jpg" alt="Premium PG Room Layout" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Premium Rooms</span>
+                            <h4 class="gallery-item-title">Spacious Multi-Sharing Setup</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 5: Room 2 (room2.jpg) -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-img-box">
+                        <img src="room2.jpg" alt="Cozy Interior Setup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Premium Rooms</span>
+                            <h4 class="gallery-item-title">Modern & Comfortable Bedding</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 6: Room 3 (room3.jpg) -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-img-box">
+                        <img src="room3.jpg" alt="Neat & Clean Living Space" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Premium Rooms</span>
+                            <h4 class="gallery-item-title">Ventilated Room Interior</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 7: Room 4 (room4.jpg) -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-img-box">
+                        <img src="room4.jpg" alt="Well-lit Room view" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Premium Rooms</span>
+                            <h4 class="gallery-item-title">Aesthetic Personal Wardrobes</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 8: Room 5 (room5.jpg) -->
+                <div class="gallery-item" data-category="rooms">
+                    <div class="gallery-img-box">
+                        <img src="room5.jpg" alt="Premium Furnished Room" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Premium Rooms</span>
+                            <h4 class="gallery-item-title">Premium Flooring & Lights</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 9: Visiting Card Front (vsiting_card_1.jpg) -->
+                <div class="gallery-item" data-category="visiting-card">
+                    <div class="gallery-img-box">
+                        <img src="vsiting_card_1.jpg" alt="Sri Chaitanya PG Visiting Card Front" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Visiting Card</span>
+                            <h4 class="gallery-item-title">Bapi Reddy PG Services</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 10: Visiting Card Back (visiting_card2.jpg) -->
+                <div class="gallery-item" data-category="visiting-card">
+                    <div class="gallery-img-box">
+                        <img src="visiting_card2.jpg" alt="Sri Chaitanya PG Visiting Card Details" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category-badge">Visiting Card</span>
+                            <h4 class="gallery-item-title">Contact & Location Details</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Slideshow Dot Indicators for Mobile -->
+            <div class="slideshow-dots" id="slideshow-dots"></div>
         </div>
     </section>
 
@@ -418,11 +499,13 @@
                                     <span class="plan-badge non-ac">Non-AC</span>
                                     <span class="plan-inclusion">With Unlimited Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
+                                <div class="plan-price-block">
                                     <span class="plan-price-label">Starting from</span>
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">8,000</span>
-                                    <span class="plan-price-period">/month</span>
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">8,000</span>
+                                        <span class="plan-price-period">/month</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pricing-plan-item">
@@ -430,11 +513,13 @@
                                     <span class="plan-badge ac">AC Room</span>
                                     <span class="plan-inclusion">With Unlimited Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
+                                <div class="plan-price-block">
                                     <span class="plan-price-label">Starting from</span>
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">10,000</span>
-                                    <span class="plan-price-period">/month</span>
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">10,000</span>
+                                        <span class="plan-price-period">/month</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -445,10 +530,12 @@
                                     <span class="plan-badge daily">Daily Stay</span>
                                     <span class="plan-inclusion">3 Sharing + Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">500</span>
-                                    <span class="plan-price-period">/day</span>
+                                <div class="plan-price-block">
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">500</span>
+                                        <span class="plan-price-period">/day</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -469,11 +556,13 @@
                                     <span class="plan-badge non-ac">Non-AC</span>
                                     <span class="plan-inclusion">With Unlimited Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
+                                <div class="plan-price-block">
                                     <span class="plan-price-label">Starting from</span>
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">8,500</span>
-                                    <span class="plan-price-period">/month</span>
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">8,500</span>
+                                        <span class="plan-price-period">/month</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pricing-plan-item">
@@ -481,11 +570,13 @@
                                     <span class="plan-badge ac">AC Room</span>
                                     <span class="plan-inclusion">With Unlimited Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
+                                <div class="plan-price-block">
                                     <span class="plan-price-label">Starting from</span>
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">12,000</span>
-                                    <span class="plan-price-period">/month</span>
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">12,000</span>
+                                        <span class="plan-price-period">/month</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -496,14 +587,15 @@
                                     <span class="plan-badge daily">Daily Stay</span>
                                     <span class="plan-inclusion">2 Sharing + Food</span>
                                 </div>
-                                <div class="plan-price-wrapper">
-                                    <span class="plan-price-currency">₹</span>
-                                    <span class="plan-price-amount">600</span>
-                                    <span class="plan-price-period">/day</span>
+                                <div class="plan-price-block">
+                                    <div class="plan-price-wrapper">
+                                        <span class="plan-price-currency">₹</span>
+                                        <span class="plan-price-amount">600</span>
+                                        <span class="plan-price-period">/day</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <a href="https://wa.me/919137958959?text=Hi,%20I'm%20interested%20in%20a%20Twin%20Sharing%20bed" target="_blank" class="btn btn-primary pricing-cta">Book Now</a>
                 </div>
@@ -1035,24 +1127,129 @@
             }
         });
 
-        // 8. Gallery Tab Filters
+        // 8. Gallery Tab Filters & Mobile Slideshow
         const galleryTabs = document.querySelectorAll('.gallery-tab');
         const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryGrid = document.getElementById('gallery-grid');
+        const dotsContainer = document.getElementById('slideshow-dots');
+        
+        let slideshowInterval = null;
+        let currentSlideIndex = 0;
 
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                galleryTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
+        function updateGalleryView() {
+            // Stop any running slideshow
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+                slideshowInterval = null;
+            }
 
-                const filter = tab.getAttribute('data-filter');
+            const activeTab = document.querySelector('.gallery-tab.active');
+            if (!activeTab) return;
+            const filter = activeTab.getAttribute('data-filter');
+            const isMobile = window.innerWidth <= 768;
+
+            if (filter === 'visiting-card' && isMobile) {
+                galleryGrid.classList.add('slideshow-active');
+                if (dotsContainer) dotsContainer.style.display = 'flex';
+
+                const slides = Array.from(document.querySelectorAll('.gallery-item[data-category="visiting-card"]'));
+                
+                // Setup dots
+                if (dotsContainer) {
+                    dotsContainer.innerHTML = '';
+                    slides.forEach((_, idx) => {
+                        const dot = document.createElement('span');
+                        dot.className = `slideshow-dot${idx === 0 ? ' active' : ''}`;
+                        dot.addEventListener('click', () => showSlide(idx));
+                        dotsContainer.appendChild(dot);
+                    });
+                }
+
+                // Initialize slides
+                slides.forEach((slide, idx) => {
+                    if (idx === 0) {
+                        slide.classList.add('slide-active');
+                        slide.style.display = 'block';
+                        slide.style.opacity = '1';
+                        slide.style.transform = 'scale(1)';
+                    } else {
+                        slide.classList.remove('slide-active');
+                        slide.style.display = 'none';
+                        slide.style.opacity = '0';
+                        slide.style.transform = 'scale(0.95)';
+                    }
+                });
+
+                // Hide other items immediately
+                galleryItems.forEach(item => {
+                    if (item.getAttribute('data-category') !== 'visiting-card') {
+                        item.style.display = 'none';
+                        item.classList.remove('slide-active');
+                    }
+                });
+
+                currentSlideIndex = 0;
+
+                // Start slideshow interval
+                slideshowInterval = setInterval(() => {
+                    if (slides.length > 0) {
+                        let nextIndex = (currentSlideIndex + 1) % slides.length;
+                        showSlide(nextIndex);
+                    }
+                }, 3000);
+
+                function showSlide(index) {
+                    if (slides.length === 0) return;
+                    
+                    const currentSlide = slides[currentSlideIndex];
+                    if (currentSlide) {
+                        currentSlide.classList.remove('slide-active');
+                        currentSlide.style.opacity = '0';
+                        currentSlide.style.transform = 'scale(0.95)';
+                    }
+                    
+                    const prevIndex = currentSlideIndex;
+                    setTimeout(() => {
+                        const currentActiveTab = document.querySelector('.gallery-tab.active');
+                        if (currentActiveTab && currentActiveTab.getAttribute('data-filter') === 'visiting-card' && window.innerWidth <= 768) {
+                            if (slides[prevIndex]) {
+                                slides[prevIndex].style.display = 'none';
+                            }
+                        }
+                    }, 600);
+
+                    currentSlideIndex = index;
+                    const nextSlide = slides[currentSlideIndex];
+                    if (nextSlide) {
+                        nextSlide.style.display = 'block';
+                        setTimeout(() => {
+                            nextSlide.classList.add('slide-active');
+                            nextSlide.style.opacity = '1';
+                            nextSlide.style.transform = 'scale(1)';
+                        }, 50);
+                    }
+
+                    // Update dots
+                    if (dotsContainer) {
+                        const dots = dotsContainer.querySelectorAll('.slideshow-dot');
+                        dots.forEach((dot, idx) => {
+                            if (idx === currentSlideIndex) {
+                                dot.classList.add('active');
+                            } else {
+                                dot.classList.remove('active');
+                            }
+                        });
+                    }
+                }
+            } else {
+                galleryGrid.classList.remove('slideshow-active');
+                if (dotsContainer) dotsContainer.style.display = 'none';
 
                 galleryItems.forEach(item => {
+                    item.classList.remove('slide-active');
                     const category = item.getAttribute('data-category');
                     if (filter === 'all' || category === filter) {
                         item.style.display = 'block';
-                        // Trigger fade-in transition
                         setTimeout(() => {
                             item.style.opacity = '1';
                             item.style.transform = 'scale(1)';
@@ -1061,8 +1258,20 @@
                         item.style.display = 'none';
                     }
                 });
+            }
+        }
+
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                updateGalleryView();
             });
         });
+
+        window.addEventListener('resize', updateGalleryView);
+        // Initialize once on load
+        updateGalleryView();
     </script>
 </body>
 </html>
