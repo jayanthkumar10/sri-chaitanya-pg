@@ -340,129 +340,142 @@
                 <p class="section-subtitle">Real, high-fidelity photos of our premium living spaces, authentic dining halls, and common facilities.</p>
             </div>
 
-            <!-- Gallery Tabs -->
-            <div class="gallery-tabs">
-                <button class="gallery-tab active" data-filter="all">All Photos</button>
-                <button class="gallery-tab" data-filter="rooms">Premium Rooms</button>
-                <button class="gallery-tab" data-filter="dining">Andhra Mess</button>
-                <button class="gallery-tab" data-filter="visiting-card">Visiting Card</button>
+            <!-- Gallery Slider Container -->
+            <div class="gallery-slider-container" id="gallery-slider-container">
+                <div class="gallery-slider-track" id="gallery-slider-track">
+                    <!-- Photo 1: Rooms (sharing.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="sharing.jpg" alt="Premium 2/3 Sharing Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Twin & Triple Sharing AC Rooms</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2: Dining (southindianthali.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="southindianthali.jpg" alt="Authentic Andhra Lunch & Dinner Meals" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Andhra Mess</span>
+                                <h4 class="gallery-item-title">Unlimited Telugu Lunch & Dinner</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3: Dining (tiffin.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="tiffin.jpg" alt="Delicious South Indian Breakfast Tiffin" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Andhra Mess</span>
+                                <h4 class="gallery-item-title">Morning Breakfast Tiffins</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4: Room 1 (room1.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="room1.jpg" alt="Premium PG Room Layout" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Spacious Multi-Sharing Setup</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5: Room 2 (room2.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="room2.jpg" alt="Cozy Interior Setup" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Modern & Comfortable Bedding</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6: Room 3 (room3.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="room3.jpg" alt="Neat & Clean Living Space" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Ventilated Room Interior</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7: Room 4 (room4.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="room4.jpg" alt="Well-lit Room view" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Aesthetic Personal Wardrobes</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8: Room 5 (room5.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="room5.jpg" alt="Premium Furnished Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Premium Rooms</span>
+                                <h4 class="gallery-item-title">Premium Flooring & Lights</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9: Visiting Card Front (vsiting_card_1.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="vsiting_card_1.jpg" alt="Sri Chaitanya PG Visiting Card Front" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Visiting Card</span>
+                                <h4 class="gallery-item-title">Bapi Reddy PG Services</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 10: Visiting Card Back (visiting_card2.jpg) -->
+                    <div class="gallery-slide-item">
+                        <div class="gallery-img-box">
+                            <img src="visiting_card2.jpg" alt="Sri Chaitanya PG Visiting Card Details" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-category-badge">Visiting Card</span>
+                                <h4 class="gallery-item-title">Contact & Location Details</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Indicators & Navigation -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="gallery-prev" aria-label="Previous Photo">
+                        <svg class="slider-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="slider-dots" id="gallery-dots">
+                        <span class="slider-dot active"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                    </div>
+                    <button class="slider-btn" id="gallery-next" aria-label="Next Photo">
+                        <svg class="slider-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
             </div>
-
-            <!-- Gallery Grid -->
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Photo 1: Rooms (sharing.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="sharing.jpg" alt="Premium 2/3 Sharing Room" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Twin & Triple Sharing AC Rooms</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 2: Dining (southindianthali.jpg) -->
-                <div class="gallery-item" data-category="dining">
-                    <div class="gallery-img-box">
-                        <img src="southindianthali.jpg" alt="Authentic Andhra Lunch & Dinner Meals" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Andhra Mess</span>
-                            <h4 class="gallery-item-title">Unlimited Telugu Lunch & Dinner</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 3: Dining (tiffin.jpg) -->
-                <div class="gallery-item" data-category="dining">
-                    <div class="gallery-img-box">
-                        <img src="tiffin.jpg" alt="Delicious South Indian Breakfast Tiffin" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Andhra Mess</span>
-                            <h4 class="gallery-item-title">Morning Breakfast Tiffins</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 4: Room 1 (room1.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="room1.jpg" alt="Premium PG Room Layout" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Spacious Multi-Sharing Setup</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 5: Room 2 (room2.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="room2.jpg" alt="Cozy Interior Setup" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Modern & Comfortable Bedding</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 6: Room 3 (room3.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="room3.jpg" alt="Neat & Clean Living Space" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Ventilated Room Interior</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 7: Room 4 (room4.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="room4.jpg" alt="Well-lit Room view" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Aesthetic Personal Wardrobes</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 8: Room 5 (room5.jpg) -->
-                <div class="gallery-item" data-category="rooms">
-                    <div class="gallery-img-box">
-                        <img src="room5.jpg" alt="Premium Furnished Room" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Premium Rooms</span>
-                            <h4 class="gallery-item-title">Premium Flooring & Lights</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 9: Visiting Card Front (vsiting_card_1.jpg) -->
-                <div class="gallery-item" data-category="visiting-card">
-                    <div class="gallery-img-box">
-                        <img src="vsiting_card_1.jpg" alt="Sri Chaitanya PG Visiting Card Front" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Visiting Card</span>
-                            <h4 class="gallery-item-title">Bapi Reddy PG Services</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 10: Visiting Card Back (visiting_card2.jpg) -->
-                <div class="gallery-item" data-category="visiting-card">
-                    <div class="gallery-img-box">
-                        <img src="visiting_card2.jpg" alt="Sri Chaitanya PG Visiting Card Details" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category-badge">Visiting Card</span>
-                            <h4 class="gallery-item-title">Contact & Location Details</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slideshow Dot Indicators for Mobile -->
-            <div class="slideshow-dots" id="slideshow-dots"></div>
         </div>
     </section>
 
@@ -1127,151 +1140,75 @@
             }
         });
 
-        // 8. Gallery Tab Filters & Mobile Slideshow
-        const galleryTabs = document.querySelectorAll('.gallery-tab');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const galleryGrid = document.getElementById('gallery-grid');
-        const dotsContainer = document.getElementById('slideshow-dots');
-        
-        let slideshowInterval = null;
-        let currentSlideIndex = 0;
+        // 8. Gallery Slider
+        const galleryTrack = document.getElementById('gallery-slider-track');
+        const gallerySlides = Array.from(galleryTrack.children);
+        const galleryPrevBtn = document.getElementById('gallery-prev');
+        const galleryNextBtn = document.getElementById('gallery-next');
+        const galleryDotsContainer = document.getElementById('gallery-dots');
+        const galleryDots = Array.from(galleryDotsContainer.children);
+        let currentGalleryIndex = 0;
+        let galleryInterval;
 
-        function updateGalleryView() {
-            // Stop any running slideshow
-            if (slideshowInterval) {
-                clearInterval(slideshowInterval);
-                slideshowInterval = null;
-            }
-
-            const activeTab = document.querySelector('.gallery-tab.active');
-            if (!activeTab) return;
-            const filter = activeTab.getAttribute('data-filter');
-            const isMobile = window.innerWidth <= 768;
-
-            if (filter === 'visiting-card' && isMobile) {
-                galleryGrid.classList.add('slideshow-active');
-                if (dotsContainer) dotsContainer.style.display = 'flex';
-
-                const slides = Array.from(document.querySelectorAll('.gallery-item[data-category="visiting-card"]'));
-                
-                // Setup dots
-                if (dotsContainer) {
-                    dotsContainer.innerHTML = '';
-                    slides.forEach((_, idx) => {
-                        const dot = document.createElement('span');
-                        dot.className = `slideshow-dot${idx === 0 ? ' active' : ''}`;
-                        dot.addEventListener('click', () => showSlide(idx));
-                        dotsContainer.appendChild(dot);
-                    });
+        function updateGallerySlide() {
+            galleryTrack.style.transform = `translateX(-${currentGalleryIndex * 100}%)`;
+            galleryDots.forEach((dot, idx) => {
+                if (idx === currentGalleryIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
                 }
+            });
+        }
 
-                // Initialize slides
-                slides.forEach((slide, idx) => {
-                    if (idx === 0) {
-                        slide.classList.add('slide-active');
-                        slide.style.display = 'block';
-                        slide.style.opacity = '1';
-                        slide.style.transform = 'scale(1)';
-                    } else {
-                        slide.classList.remove('slide-active');
-                        slide.style.display = 'none';
-                        slide.style.opacity = '0';
-                        slide.style.transform = 'scale(0.95)';
-                    }
-                });
+        function nextGallerySlide() {
+            currentGalleryIndex = (currentGalleryIndex + 1) % gallerySlides.length;
+            updateGallerySlide();
+        }
 
-                // Hide other items immediately
-                galleryItems.forEach(item => {
-                    if (item.getAttribute('data-category') !== 'visiting-card') {
-                        item.style.display = 'none';
-                        item.classList.remove('slide-active');
-                    }
-                });
+        function prevGallerySlide() {
+            currentGalleryIndex = (currentGalleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+            updateGallerySlide();
+        }
 
-                currentSlideIndex = 0;
+        function startGalleryTimer() {
+            stopGalleryTimer();
+            galleryInterval = setInterval(nextGallerySlide, 4000); // Cycle every 4 seconds
+        }
 
-                // Start slideshow interval
-                slideshowInterval = setInterval(() => {
-                    if (slides.length > 0) {
-                        let nextIndex = (currentSlideIndex + 1) % slides.length;
-                        showSlide(nextIndex);
-                    }
-                }, 3000);
-
-                function showSlide(index) {
-                    if (slides.length === 0) return;
-                    
-                    const currentSlide = slides[currentSlideIndex];
-                    if (currentSlide) {
-                        currentSlide.classList.remove('slide-active');
-                        currentSlide.style.opacity = '0';
-                        currentSlide.style.transform = 'scale(0.95)';
-                    }
-                    
-                    const prevIndex = currentSlideIndex;
-                    setTimeout(() => {
-                        const currentActiveTab = document.querySelector('.gallery-tab.active');
-                        if (currentActiveTab && currentActiveTab.getAttribute('data-filter') === 'visiting-card' && window.innerWidth <= 768) {
-                            if (slides[prevIndex]) {
-                                slides[prevIndex].style.display = 'none';
-                            }
-                        }
-                    }, 600);
-
-                    currentSlideIndex = index;
-                    const nextSlide = slides[currentSlideIndex];
-                    if (nextSlide) {
-                        nextSlide.style.display = 'block';
-                        setTimeout(() => {
-                            nextSlide.classList.add('slide-active');
-                            nextSlide.style.opacity = '1';
-                            nextSlide.style.transform = 'scale(1)';
-                        }, 50);
-                    }
-
-                    // Update dots
-                    if (dotsContainer) {
-                        const dots = dotsContainer.querySelectorAll('.slideshow-dot');
-                        dots.forEach((dot, idx) => {
-                            if (idx === currentSlideIndex) {
-                                dot.classList.add('active');
-                            } else {
-                                dot.classList.remove('active');
-                            }
-                        });
-                    }
-                }
-            } else {
-                galleryGrid.classList.remove('slideshow-active');
-                if (dotsContainer) dotsContainer.style.display = 'none';
-
-                galleryItems.forEach(item => {
-                    item.classList.remove('slide-active');
-                    const category = item.getAttribute('data-category');
-                    if (filter === 'all' || category === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+        function stopGalleryTimer() {
+            if (galleryInterval) {
+                clearInterval(galleryInterval);
             }
         }
 
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                galleryTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                updateGalleryView();
+        galleryNextBtn.addEventListener('click', () => {
+            nextGallerySlide();
+            startGalleryTimer();
+        });
+
+        galleryPrevBtn.addEventListener('click', () => {
+            prevGallerySlide();
+            startGalleryTimer();
+        });
+
+        galleryDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                currentGalleryIndex = idx;
+                updateGallerySlide();
+                startGalleryTimer();
             });
         });
 
-        window.addEventListener('resize', updateGalleryView);
-        // Initialize once on load
-        updateGalleryView();
+        // Pause on hover
+        const galleryContainer = document.getElementById('gallery-slider-container');
+        if (galleryContainer) {
+            galleryContainer.addEventListener('mouseenter', stopGalleryTimer);
+            galleryContainer.addEventListener('mouseleave', startGalleryTimer);
+        }
+
+        // Start slide rotation
+        startGalleryTimer();
     </script>
 </body>
 </html>
