@@ -1712,6 +1712,15 @@ input:checked + .toggle-slider:before {
     gap: 0.15rem;
 }
 
+.plan-price-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-dark);
+    margin-right: 0.2rem;
+    align-self: center;
+    font-family: var(--font-sans);
+    font-weight: 500;
+}
+
 .plan-price-currency {
     font-size: 1rem;
     font-weight: 700;
