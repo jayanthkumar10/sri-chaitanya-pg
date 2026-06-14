@@ -1223,8 +1223,8 @@
             const title = item.querySelector('.gallery-item-title');
             
             if (img) {
-                img.style.cursor = 'zoom-in';
-                img.addEventListener('click', () => {
+                item.style.cursor = 'zoom-in';
+                item.addEventListener('click', () => {
                     // Stop slide timer while viewing full screen
                     stopGalleryTimer();
                     
