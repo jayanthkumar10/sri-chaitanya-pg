@@ -220,9 +220,9 @@ a {
 .logo-main {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     color: var(--color-leaf);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .logo-sub {
@@ -1392,6 +1392,10 @@ input:checked + .toggle-slider:before {
         grid-template-columns: 1fr;
     }
     
+    .location-content {
+        padding: 3rem 2rem;
+    }
+    
     .location-map-container {
         min-height: 350px;
     }
@@ -1481,6 +1485,15 @@ input:checked + .toggle-slider:before {
         right: 6%;
         transform: rotate(-3deg);
     }
+    
+    .location-content {
+        padding: 2.25rem 1.5rem;
+    }
+    
+    .location-list {
+        margin: 1.5rem 0;
+        gap: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1489,13 +1502,30 @@ input:checked + .toggle-slider:before {
     }
     
     .logo-main {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
+        line-height: 1.15;
     }
     
     .logo-sub {
         font-size: 8px;
     }
     
+    .location-content {
+        padding: 1.75rem 1.15rem;
+    }
+    
+    .location-list {
+        margin: 1.25rem 0;
+        gap: 1rem;
+    }
+    
+    .location-map-container {
+        min-height: 280px;
+    }
+    
+    .location-alert {
+        padding: 1rem 1.15rem;
+    }
 
     .testimonial-bubble {
         padding: 2rem 1.5rem;
