@@ -1628,53 +1628,106 @@ input:checked + .toggle-slider:before {
 }
 
 /* Pricing Options Layouts */
-.pricing-options-monthly,
-.pricing-options-daily {
-    margin: 1.5rem 0;
+.pricing-plans-stack {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    min-height: 110px; /* Keep height stable during switcher transitions */
+    margin: 1.5rem 0;
+    min-height: 155px; /* Keep height stable during switcher transitions */
 }
 
-.pricing-option-row {
+.pricing-plan-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed var(--color-border);
+    background-color: var(--color-leaf-light); /* Soft background tint */
+    border: 1px solid rgba(27, 59, 43, 0.08);
+    border-radius: 16px;
+    padding: 0.75rem 1.1rem;
+    transition: all 0.3s ease;
 }
 
-.pricing-option-row:last-child {
-    border-bottom: none;
+.pricing-plan-item:hover {
+    border-color: var(--color-leaf);
+    background-color: rgba(27, 59, 43, 0.04);
 }
 
-.option-label {
-    font-weight: 600;
+.pricing-card.popular .pricing-plan-item {
+    background-color: rgba(217, 119, 6, 0.04); /* Soft saffron tint for best choice */
+    border-color: rgba(217, 119, 6, 0.1);
+}
+
+.pricing-card.popular .pricing-plan-item:hover {
+    border-color: var(--color-saffron);
+    background-color: rgba(217, 119, 6, 0.07);
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
+
+.plan-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    display: inline-block;
+    font-family: var(--font-display);
+}
+
+.plan-badge.non-ac {
+    background-color: rgba(100, 100, 100, 0.12);
+    color: #4b5563;
+}
+
+.plan-badge.ac {
+    background-color: rgba(27, 59, 43, 0.12);
     color: var(--color-leaf);
-    font-size: 0.95rem;
-    text-align: left;
 }
 
-.pricing-option-row .pricing-price-box {
-    margin: 0;
-    align-items: baseline;
+.pricing-card.popular .plan-badge.ac {
+    background-color: rgba(217, 119, 6, 0.15);
+    color: var(--color-saffron);
 }
 
-.pricing-option-row .pricing-amount {
-    font-size: 1.85rem;
-    font-weight: 700;
-    color: var(--color-dark);
+.plan-badge.daily {
+    background-color: rgba(185, 28, 28, 0.08);
+    color: var(--color-terracotta);
 }
 
-.pricing-option-row .pricing-currency {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--color-dark);
-}
-
-.pricing-option-row .pricing-period {
-    font-size: 0.85rem;
+.plan-inclusion {
+    font-size: 0.75rem;
     color: var(--color-gray-dark);
+    font-weight: 500;
+}
+
+.plan-price-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.15rem;
+}
+
+.plan-price-currency {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.plan-price-amount {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    font-family: var(--font-display);
+}
+
+.plan-price-period {
+    font-size: 0.8rem;
+    color: var(--color-gray-dark);
+    margin-left: 0.1rem;
 }
 
