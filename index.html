@@ -1210,6 +1210,71 @@
 
         // Start slide rotation
         startGalleryTimer();
+
+        // 9. Gallery Lightbox Modal
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const gallerySlideItems = document.querySelectorAll('.gallery-slide-item');
+
+        gallerySlideItems.forEach(item => {
+            const img = item.querySelector('img');
+            const title = item.querySelector('.gallery-item-title');
+            
+            if (img) {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', () => {
+                    // Stop slide timer while viewing full screen
+                    stopGalleryTimer();
+                    
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightboxCaption.textContent = title ? title.textContent : '';
+                    
+                    lightboxModal.style.display = 'flex';
+                    setTimeout(() => {
+                        lightboxModal.classList.add('active');
+                    }, 10);
+                });
+            }
+        });
+
+        function closeLightbox() {
+            if (lightboxModal) {
+                lightboxModal.classList.remove('active');
+                setTimeout(() => {
+                    lightboxModal.style.display = 'none';
+                    // Resume timer
+                    startGalleryTimer();
+                }, 300);
+            }
+        }
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+        
+        if (lightboxModal) {
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+        }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
     </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery photo">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 </body>
 </html>
